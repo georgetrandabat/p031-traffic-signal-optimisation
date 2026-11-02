@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- E2 lane-area detectors covering the last 200 m of each approach. Aggregated every 60 s. -->
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <laneAreaDetector id="e2_N" lane="N_in_0" pos="292.8" length="200" period="60" file="e2.xml"/>
+    <laneAreaDetector id="e2_S" lane="S_in_0" pos="292.8" length="200" period="60" file="e2.xml"/>
+    <laneAreaDetector id="e2_E" lane="E_in_0" pos="292.8" length="200" period="60" file="e2.xml"/>
+    <laneAreaDetector id="e2_W" lane="W_in_0" pos="292.8" length="200" period="60" file="e2.xml"/>
+</additional>

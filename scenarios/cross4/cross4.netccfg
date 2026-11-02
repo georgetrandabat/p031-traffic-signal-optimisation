@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Rebuild the network with: netconvert -c cross4.netccfg -->
+<netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+    <input>
+        <node-files value="cross4.nod.xml"/>
+        <edge-files value="cross4.edg.xml"/>
+        <connection-files value="cross4.con.xml"/>
+    </input>
+    <output>
+        <output-file value="cross4.net.xml"/>
+    </output>
+    <processing>
+        <no-turnarounds value="true"/>
+    </processing>
+</netconvertConfiguration>

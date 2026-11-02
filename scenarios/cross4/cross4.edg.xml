@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- One lane per direction, 50 km/h. "_in" edges approach the junction, "_out" edges leave it. -->
+<edges xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/edges_file.xsd">
+    <edge id="N_in"  from="N" to="C" priority="2" numLanes="1" speed="13.89"/>
+    <edge id="S_in"  from="S" to="C" priority="2" numLanes="1" speed="13.89"/>
+    <edge id="E_in"  from="E" to="C" priority="1" numLanes="1" speed="13.89"/>
+    <edge id="W_in"  from="W" to="C" priority="1" numLanes="1" speed="13.89"/>
+    <edge id="N_out" from="C" to="N" priority="2" numLanes="1" speed="13.89"/>
+    <edge id="S_out" from="C" to="S" priority="2" numLanes="1" speed="13.89"/>
+    <edge id="E_out" from="C" to="E" priority="1" numLanes="1" speed="13.89"/>
+    <edge id="W_out" from="C" to="W" priority="1" numLanes="1" speed="13.89"/>
+</edges>

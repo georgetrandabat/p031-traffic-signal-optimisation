@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 60 s cycle. Each phase loses ~5 s (3 s yellow + 2 s all-red), so effective green ~= displayed green.
+     State string link order: N_in, E_in, S_in, W_in. -->
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <tlLogic id="C" type="static" programID="tuned" offset="0">
+        <phase duration="34" state="GrGr"/> <!-- main (N-S) green -->
+        <phase duration="3"  state="yryr"/>
+        <phase duration="2"  state="rrrr"/>
+        <phase duration="16" state="rGrG"/> <!-- minor (E-W) green -->
+        <phase duration="3"  state="ryry"/>
+        <phase duration="2"  state="rrrr"/>
+    </tlLogic>
+</additional>
