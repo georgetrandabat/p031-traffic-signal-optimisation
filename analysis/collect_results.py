@@ -1,4 +1,4 @@
-"""Run each cross4 scenario over several seeds and write analysis/results.csv."""
+"""Run each cross4 scenario over several seeds and write analysis/results.csv and analysis/summary.csv."""
 import argparse
 import csv
 import re
@@ -8,10 +8,11 @@ from pathlib import Path
 
 SCENARIO_DIR = Path(__file__).resolve().parent.parent / "scenarios" / "cross4"
 OUT_CSV = Path(__file__).resolve().parent / "results.csv"
+SUMMARY_CSV = Path(__file__).resolve().parent / "summary.csv"
 
-MAIN_LANES = {"N_in_0", "S_in_0"}
-MINOR_LANES = {"E_in_0", "W_in_0"}
-MAIN_FLOWS = ("NS.", "SN.")
+MAIN_LANES = {"E_in_0", "W_in_0"}
+MINOR_LANES = {"N_in_0", "S_in_0"}
+MAIN_FLOWS = ("EW.", "WE.")
 
 COLUMNS = [
     "scenario", "demand", "lights", "seed", "approach",
@@ -64,6 +65,33 @@ def mean(values):
     return round(sum(values) / len(values), 2) if values else ""
 
 
+def summarise(rows):
+    summary = []
+    for scenario in dict.fromkeys(r["scenario"] for r in rows):
+        runs = [r for r in rows if r["scenario"] == scenario]
+        avg = lambda approach, key: round(mean([r[key] for r in runs if r["approach"] == approach]), 1)
+        summary.append({
+            "scenario": scenario,
+            "lights": runs[0]["lights"],
+            "demand": runs[0]["demand"],
+            "wait_s": avg("all", "mean_wait_s"),
+            "main_wait_s": avg("main", "mean_wait_s"),
+            "minor_wait_s": avg("minor", "mean_wait_s"),
+            "depart_delay_s": avg("all", "mean_depart_delay_s"),
+            "travel_time_s": avg("all", "mean_travel_time_s"),
+            "unfinished": avg("all", "unfinished"),
+        })
+    return summary
+
+
+def print_table(summary):
+    cols = list(summary[0])
+    widths = [max(len(c), *(len(str(s[c])) for s in summary)) for c in cols]
+    print("  ".join(c.ljust(w) for c, w in zip(cols, widths)))
+    for s in summary:
+        print("  ".join(str(s[c]).ljust(w) for c, w in zip(cols, widths)))
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--seeds", type=int, nargs="+", default=[1, 2, 3, 4, 5])
@@ -98,6 +126,14 @@ def main():
         writer.writeheader()
         writer.writerows(rows)
     print(f"wrote {len(rows)} rows to {OUT_CSV}")
+
+    summary = summarise(rows)
+    with open(SUMMARY_CSV, "w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=list(summary[0]))
+        writer.writeheader()
+        writer.writerows(summary)
+    print(f"wrote summary (mean of {len(args.seeds)} seeds) to {SUMMARY_CSV}\n")
+    print_table(summary)
 
 
 if __name__ == "__main__":

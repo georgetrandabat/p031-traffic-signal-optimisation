@@ -4,8 +4,8 @@
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
     <vType id="main" vClass="passenger" color="1,0,0"/>
     <vType id="minor" vClass="passenger" color="1,1,0"/>
-    <flow id="NS" type="main" begin="0" end="3600" period="exp(0.265556)" from="N_in" to="S_out" departLane="best" departSpeed="max"/>
-    <flow id="SN" type="main" begin="0" end="3600" period="exp(0.265556)" from="S_in" to="N_out" departLane="best" departSpeed="max"/>
-    <flow id="EW" type="minor" begin="0" end="3600" period="exp(0.088611)" from="E_in" to="W_out" departLane="best" departSpeed="max"/>
-    <flow id="WE" type="minor" begin="0" end="3600" period="exp(0.088611)" from="W_in" to="E_out" departLane="best" departSpeed="max"/>
+    <flow id="NS" type="minor" begin="0" end="3600" period="exp(0.088611)" from="N_in" to="S_out" departLane="best" departSpeed="max"/>
+    <flow id="SN" type="minor" begin="0" end="3600" period="exp(0.088611)" from="S_in" to="N_out" departLane="best" departSpeed="max"/>
+    <flow id="EW" type="main" begin="0" end="3600" period="exp(0.265556)" from="E_in" to="W_out" departLane="best" departSpeed="max"/>
+    <flow id="WE" type="main" begin="0" end="3600" period="exp(0.265556)" from="W_in" to="E_out" departLane="best" departSpeed="max"/>
 </routes>

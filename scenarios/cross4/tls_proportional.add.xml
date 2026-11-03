@@ -3,11 +3,11 @@
      State string link order: N_in, E_in, S_in, W_in. -->
 <additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
     <tlLogic id="C" type="static" programID="proportional" offset="0">
-        <phase duration="38" state="GrGr"/> <!-- main (N-S) green -->
-        <phase duration="3"  state="yryr"/>
-        <phase duration="2"  state="rrrr"/>
-        <phase duration="12" state="rGrG"/> <!-- minor (E-W) green -->
+        <phase duration="38" state="rGrG"/> <!-- main (E-W) green -->
         <phase duration="3"  state="ryry"/>
+        <phase duration="2"  state="rrrr"/>
+        <phase duration="12" state="GrGr"/> <!-- minor (N-S) green -->
+        <phase duration="3"  state="yryr"/>
         <phase duration="2"  state="rrrr"/>
     </tlLogic>
 </additional>
