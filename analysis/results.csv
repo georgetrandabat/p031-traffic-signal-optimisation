@@ -1,0 +1,16 @@
+scenario,demand,lights,seed,approach,vehicles,unfinished,mean_wait_s,mean_depart_delay_s,mean_travel_time_s,max_queue_m
+s1_non_optimised_lights,moderate,equal,1,main,1871,49,87.61,264.41,247.05,492.7
+s1_non_optimised_lights,moderate,equal,1,minor,626,0,9.07,0.58,94.29,73.61
+s1_non_optimised_lights,moderate,equal,1,all,2497,49,67.92,198.27,208.75,492.7
+s2_optimised_proportional,moderate,proportional,1,main,1871,0,5.32,0.92,96.84,208.63
+s2_optimised_proportional,moderate,proportional,1,minor,626,0,53.3,0.57,148.77,208.56
+s2_optimised_proportional,moderate,proportional,1,all,2497,0,17.35,0.83,109.85,208.63
+s3_non_optimised_both,heavy,equal,1,main,1951,115,92.22,652.4,256.13,492.7
+s3_non_optimised_both,heavy,equal,1,minor,769,0,10.48,0.56,97.07,81.03
+s3_non_optimised_both,heavy,equal,1,all,2720,115,69.11,468.11,211.16,492.7
+s4_non_optimised_traffic,heavy,tuned,1,main,2373,0,34.57,175.02,177.39,492.7
+s4_non_optimised_traffic,heavy,tuned,1,minor,769,0,27.01,0.56,117.14,126.02
+s4_non_optimised_traffic,heavy,tuned,1,all,3142,0,32.72,132.32,162.65,492.7
+s5_optimised_tuned,moderate,tuned,1,main,1871,0,12.39,0.93,108.92,403.64
+s5_optimised_tuned,moderate,tuned,1,minor,626,0,16.92,0.58,103.97,73.54
+s5_optimised_tuned,moderate,tuned,1,all,2497,0,13.52,0.84,107.68,403.64

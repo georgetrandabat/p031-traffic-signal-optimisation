@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- moderate demand: main 956 veh/h per lane, minor 319 veh/h per lane, for 1 hour.
+     period="exp(rate)" gives random (Poisson) arrivals, rate in veh/s. -->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="main" vClass="passenger" color="1,0,0"/>
+    <vType id="minor" vClass="passenger" color="1,1,0"/>
+    <flow id="NS" type="minor" begin="0" end="3600" period="exp(0.088611)" from="N_in" to="S_out" departLane="best" departSpeed="max"/>
+    <flow id="SN" type="minor" begin="0" end="3600" period="exp(0.088611)" from="S_in" to="N_out" departLane="best" departSpeed="max"/>
+    <flow id="EW" type="main" begin="0" end="3600" period="exp(0.265556)" from="E_in" to="W_out" departLane="best" departSpeed="max"/>
+    <flow id="WE" type="main" begin="0" end="3600" period="exp(0.265556)" from="W_in" to="E_out" departLane="best" departSpeed="max"/>
+</routes>
