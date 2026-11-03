@@ -6,3 +6,4 @@ scenarios/*/output/*
 !scenarios/*/output/.gitkeep
 scenarios_tutorials/*/output/
 docs/cheatsheet.md
+.vscode/settings.json
