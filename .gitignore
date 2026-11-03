@@ -3,6 +3,5 @@
 __pycache__/
 *.pyc
 scenarios/*/output/*
-!scenarios/*/output/.gitkeep
 scenarios_tutorials/*/output/
 docs/cheatsheet.md

@@ -5,4 +5,13 @@
     <laneAreaDetector id="e2_S" lane="S_in_0" pos="292.8" length="200" period="60" file="e2.xml"/>
     <laneAreaDetector id="e2_E" lane="E_in_0" pos="292.8" length="200" period="60" file="e2.xml"/>
     <laneAreaDetector id="e2_W" lane="W_in_0" pos="292.8" length="200" period="60" file="e2.xml"/>
+
+    <!-- Stop-line loops: log the time each vehicle crosses. -->
+    <instantInductionLoop id="stop_N" lane="N_in_0" pos="-0.1" file="stopline.xml"/>
+    <instantInductionLoop id="stop_S" lane="S_in_0" pos="-0.1" file="stopline.xml"/>
+    <instantInductionLoop id="stop_E" lane="E_in_0" pos="-0.1" file="stopline.xml"/>
+    <instantInductionLoop id="stop_W" lane="W_in_0" pos="-0.1" file="stopline.xml"/>
+
+    <!-- Logs when each lane's green starts and ends. -->
+    <timedEvent type="SaveTLSSwitchTimes" source="C" dest="tls_switches.xml"/>
 </additional>
