@@ -1,6 +1,6 @@
-scenario,lights,demand,wait_s,main_wait_s,minor_wait_s,depart_delay_s,travel_time_s,unfinished
-s1_non_optimised_lights,equal,moderate,67.9,87.6,9.1,198.3,208.8,49.0
-s2_optimised_proportional,proportional,moderate,17.4,5.3,53.3,0.8,109.8,0.0
-s3_non_optimised_both,equal,heavy,69.1,92.2,10.5,468.1,211.2,115.0
-s4_non_optimised_traffic,tuned,heavy,32.7,34.6,27.0,132.3,162.7,0.0
-s5_optimised_tuned,tuned,moderate,13.5,12.4,16.9,0.8,107.7,0.0
+scenario,lights,demand,wait_s,depart_delay_s,travel_time_s,main_queue_m,minor_queue_m,main_vc,minor_vc,junction_vc
+s1_non_optimised_lights,equal,moderate,69.9,235.3,213.1,342.1,7.0,1.22,0.41,0.82
+s2_optimised_proportional,proportional,moderate,22.0,0.9,116.0,18.8,52.8,0.81,0.85,0.82
+s3_non_optimised_both,equal,heavy,68.6,487.5,210.2,361.5,9.4,1.54,0.51,1.02
+s4_non_optimised_traffic,tuned,heavy,34.1,161.5,166.1,294.2,26.3,1.13,0.8,1.02
+s5_optimised_tuned,tuned,moderate,15.4,0.9,110.6,52.9,13.6,0.9,0.64,0.82
