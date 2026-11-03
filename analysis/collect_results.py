@@ -24,7 +24,7 @@ COLUMNS = [
 def scenario_info(cfg):
     text = cfg.read_text()
     demand = re.search(r"demand_(\w+)\.rou\.xml", text).group(1)
-    lights = re.search(r"tls_(\w+)\.add\.xml", text).group(1)
+    lights = re.search(r"tlLogic_(\w+)\.add\.xml", text).group(1)
     return demand, lights
 
 
