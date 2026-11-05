@@ -25,7 +25,7 @@ def scenario_label(row):
 
 
 def bar_chart(rows, filename, title, ylabel, series):
-    fig, ax = plt.subplots(figsize=(9, 5))
+    fig, ax = plt.subplots(figsize=(11, 5))
     positions = range(len(rows))
     bar_width = GROUP_WIDTH / max(len(series), 2)
 

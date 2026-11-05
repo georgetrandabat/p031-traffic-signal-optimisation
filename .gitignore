@@ -7,3 +7,4 @@ scenarios/*/output/*
 scenarios_tutorials/*/output/
 docs/cheatsheet.md
 .vscode/settings.json
+docs/commands.txt
