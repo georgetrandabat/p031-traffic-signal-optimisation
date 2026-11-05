@@ -8,7 +8,6 @@
     </input>
     <time>
         <begin value="0"/>
-        <end value="4500"/> <!-- 1 h of demand + 15 min to clear -->
     </time>
     <random_number>
         <seed value="42"/>

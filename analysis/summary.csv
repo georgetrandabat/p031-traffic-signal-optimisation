@@ -1,7 +1,7 @@
 scenario,lights,demand,wait_s,depart_delay_s,travel_time_s,main_queue_m,minor_queue_m,main_vc,minor_vc,junction_vc
-s1_moderate_equal,equal,moderate,69.9,235.3,213.1,342.1,7.0,1.23,0.41,0.82
+s1_moderate_equal,equal,moderate,71.0,236.1,216.2,342.1,7.0,1.23,0.41,0.82
 s2_moderate_proportional,proportional,moderate,22.0,0.9,116.0,18.8,52.8,0.81,0.85,0.82
 s3_moderate_tuned,tuned,moderate,15.4,0.9,110.6,52.9,13.6,0.9,0.64,0.82
-s4_heavy_equal,equal,heavy,68.6,487.5,210.2,361.5,9.4,1.54,0.51,1.02
-s5_heavy_proportional,proportional,heavy,71.3,42.7,213.7,176.6,246.4,1.01,1.07,1.02
+s4_heavy_equal,equal,heavy,74.8,671.0,224.2,361.5,9.4,1.54,0.51,1.02
+s5_heavy_proportional,proportional,heavy,71.5,42.7,214.1,176.6,246.4,1.01,1.07,1.02
 s6_heavy_tuned,tuned,heavy,34.1,161.5,166.1,294.2,26.3,1.13,0.8,1.02
