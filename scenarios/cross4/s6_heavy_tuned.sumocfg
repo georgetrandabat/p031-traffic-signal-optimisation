@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Run with: sumo -c s1_non_optimised_lights.sumocfg   (outputs go to output/s1_non_optimised_lights_*.xml) -->
+<!-- Run with: sumo -c s6_heavy_tuned.sumocfg   (outputs go to output/s6_heavy_tuned_*.xml) -->
 <sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
     <input>
         <net-file value="cross4.net.xml"/>
-        <route-files value="demand_moderate.rou.xml"/>
-        <additional-files value="tlLogic_equal.add.xml,detectors.add.xml"/>
+        <route-files value="demand_heavy.rou.xml"/>
+        <additional-files value="tlLogic_tuned.add.xml,detectors.add.xml"/>
     </input>
     <time>
         <begin value="0"/>
-        <end value="4500"/> <!-- 1 h of demand + 15 min to clear -->
     </time>
     <random_number>
         <seed value="42"/>
@@ -17,7 +16,7 @@
         <time-to-teleport value="-1"/> <!-- never teleport stuck cars; they would hide congestion -->
     </processing>
     <output>
-        <output-prefix value="output/s1_non_optimised_lights_"/>
+        <output-prefix value="output/s6_heavy_tuned_"/>
         <tripinfo-output value="tripinfo.xml"/>
         <tripinfo-output.write-unfinished value="true"/> <!-- otherwise cars still queued at the end are silently dropped -->
         <summary-output value="summary.xml"/>
