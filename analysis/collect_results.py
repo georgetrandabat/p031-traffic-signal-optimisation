@@ -21,7 +21,7 @@ STARTUP_VEHICLES = 4
 COLUMNS = [
     "scenario", "demand", "lights", "seed", "approach",
     "mean_wait_s", "mean_depart_delay_s", "mean_travel_time_s",
-    "mean_queue_m", "vc_ratio",
+    "mean_queue_m", "vc_ratio", "throughput_vph", "mean_speed_kmh",
 ]
 
 
@@ -69,6 +69,16 @@ def mean_queue(queues, road):
     lanes = ROAD_LANES[road]
     total = sum(q for lane in lanes for t, q in queues[lane].items() if t < DEMAND_END_S)
     return total / (DEMAND_END_S * len(lanes))
+
+
+def parse_network(out_dir):
+    # Whole-network numbers from summary.xml, over the hour demand is arriving.
+    steps = [s for s in ET.parse(out_dir / "summary.xml").getroot().iter("step") if float(s.get("time")) < DEMAND_END_S]
+    speeds = [float(s.get("meanSpeed")) for s in steps if float(s.get("meanSpeed")) >= 0]  # -1 means no cars on the map
+    return {
+        "throughput_vph": int(steps[-1].get("arrived")),  # cars that finished their trip within the hour
+        "mean_speed_kmh": round(mean(speeds) * 3.6, 2),
+    }
 
 
 def parse_crossings(out_dir):
@@ -155,6 +165,8 @@ def summarise(rows):
             "main_vc": avg("main", "vc_ratio", 2),
             "minor_vc": avg("minor", "vc_ratio", 2),
             "junction_vc": avg("all", "vc_ratio", 2),
+            "throughput_vph": avg("all", "throughput_vph", 0),
+            "mean_speed_kmh": avg("all", "mean_speed_kmh"),
         })
     return summary
 
@@ -186,6 +198,7 @@ def main():
             runs.append({
                 "scenario": scenario, "demand": demand, "lights": lights, "seed": seed,
                 "trips": parse_trips(out_dir), "queues": queues, "greens": parse_greens(out_dir, queues),
+                "network": parse_network(out_dir),
             })
 
     sat_flow_vph = measure_saturation_flow([g for r in runs for g in r["greens"]])
@@ -203,6 +216,9 @@ def main():
                 "mean_travel_time_s": mean([t["travel_time"] for t in ts]),
                 "mean_queue_m": round(mean_queue(r["queues"], approach), 2),
                 "vc_ratio": vc_ratio(r["greens"], approach, demand_vph[approach], sat_flow_vph),
+                # Network-wide, so only filled on the 'all' row.
+                "throughput_vph": r["network"]["throughput_vph"] if approach == "all" else "",
+                "mean_speed_kmh": r["network"]["mean_speed_kmh"] if approach == "all" else "",
             })
 
     with open(OUT_CSV, "w", newline="") as f:
