@@ -59,6 +59,57 @@ sumo-gui
 
 You should see `ok`, then `Eclipse SUMO sumo 1.28.0`, then the SUMO GUI window.
 
+## Web monitor (Deliverable 2)
+
+A browser UI that runs SUMO headless through TraCI and shows the junction live: vehicles, signal states, queues and waiting times.
+
+```
+backend/scenarios.py        scenario list (the only place paths live)
+backend/sim/controller.py   all TraCI code: load, step, snapshot
+backend/app.py              FastAPI: WebSocket /ws, real-time loop, serves frontend/static
+frontend/src/main.ts        TypeScript source (message types at the top)
+frontend/static/            index.html; tsc writes js/ here
+```
+
+### Extra prerequisites
+
+- [Node.js](https://nodejs.org/) LTS (only needed to compile the TypeScript). Check with `node --version`.
+- The Python packages above. `requirements.txt` now also includes `fastapi` and `uvicorn`, so run `pip install -r requirements.txt` again.
+
+### Build and run
+
+```powershell
+cd frontend
+npm install        # first time only
+npm run build      # compiles src/*.ts -> static/js/ (or: npm run watch)
+cd ..
+uvicorn backend.app:app --reload
+```
+
+Then open http://localhost:8000. Pick a scenario and press **Start**. Speed 1× is real time (1 sim second per wall second). Step only works while paused. Reset relaunches the current scenario.
+
+Web runs write their SUMO outputs to `scenarios/<name>/output/web_<key>_*.xml`, so they don't overwrite the analysis runs.
+
+### Adding a scenario
+
+Add an entry to `SCENARIOS` in `backend/scenarios.py`:
+
+```python
+"heavy_tuned": {"label": "Heavy tuned", "cfg": CROSS4 / "s7_heavy_tuned.sumocfg"},
+```
+
+Traffic lights, approaches and geometry are discovered from TraCI and sumolib, so nothing else needs changing.
+
+### WebSocket messages
+
+Types are at the top of `frontend/src/main.ts`.
+
+Server → browser:
+- `{"type": "network", scenario, scenarios: {key: label}, bounds: [xmin, ymin, xmax, ymax], lanes: [[[x, y], ...]], signals: [{tl, index, x, y}]}`: sent on connect, scenario change and reset. A signal's `index` picks its character in the light's `state` string.
+- `{"type": "snapshot", scenario, status, time, step, arrived, vehicles: [[x, y, speed]], meanSpeed, totalWaiting, lights: [{id, program, phase, state, nextSwitchIn}], approaches: [{edge, queue, meanSpeed, waiting}]}`: sent every step and after every command. `status` is `idle | paused | running | finished`. For actuated lights, `nextSwitchIn` is the *earliest* switch and can be pushed back.
+
+Browser → server: `{"cmd": "start" | "pause" | "step" | "reset"}`, `{"cmd": "scenario", "scenario": key}`, `{"cmd": "speed", "speed": 1 | 2 | 5 | 10}`.
+
 ## Things to avoid
 
 - **Don't install `eclipse-sumo` or `libsumo` from pip.** SUMO comes from the official installer above, and on Windows, Smart App Control blocks the unsigned DLLs in those pip packages. Use `traci` instead of `libsumo`; it has the same API.

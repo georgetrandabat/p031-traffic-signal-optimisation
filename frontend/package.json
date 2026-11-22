@@ -1,0 +1,13 @@
+{
+  "name": "p031-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Browser UI for the P031 traffic monitor (plain TypeScript, compiled with tsc)",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "~5.6.3"
+  }
+}
