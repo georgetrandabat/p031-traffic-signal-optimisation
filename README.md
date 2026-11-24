@@ -88,7 +88,7 @@ uvicorn backend.app:app --reload
 
 Then open http://localhost:8000. Pick a scenario and press **Start**. Speed 1× is real time (1 sim second per wall second). Step only works while paused. Reset relaunches the current scenario.
 
-Web runs write their SUMO outputs to `scenarios/<name>/output/web_<key>_*.xml`, so they don't overwrite the analysis runs.
+Web runs write their SUMO outputs to `scenarios/<name>/output/web_<key>/`, so they don't overwrite the analysis runs.
 
 ### Adding a scenario
 

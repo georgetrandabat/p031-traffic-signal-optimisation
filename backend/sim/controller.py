@@ -22,7 +22,8 @@ class SimController:
         self.close()
         cfg = Path(self.scenarios[key]["cfg"])
         # output-prefix stops web runs overwriting the analysis outputs (relative to the cfg folder)
-        traci.start([sumolib.checkBinary("sumo"), "-c", str(cfg), "--output-prefix", f"output/web_{key}_"])
+        (cfg.parent / "output" / f"web_{key}").mkdir(parents=True, exist_ok=True)
+        traci.start([sumolib.checkBinary("sumo"), "-c", str(cfg), "--output-prefix", f"output/web_{key}/"])
         self.connected = True
         self.key = key
         self.step_count = 0
