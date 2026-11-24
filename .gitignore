@@ -8,3 +8,5 @@ scenarios_tutorials/*/output/
 docs/cheatsheet.md
 .vscode/settings.json
 docs/commands.txt
+frontend/node_modules/
+frontend/static/js/
