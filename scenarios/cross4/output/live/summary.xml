@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-11-10T20:28:06.493244+00:00 by Eclipse SUMO sumo 1.28.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\georg\Desktop\P031\scenarios\cross4\cross4.net.xml"/>
+        <route-files value="C:\Users\georg\Desktop\P031\scenarios\cross4\demand_moderate.rou.xml"/>
+        <additional-files value="C:\Users\georg\Desktop\P031\scenarios\cross4\tlLogic_equal.add.xml,C:\Users\georg\Desktop\P031\scenarios\cross4\detectors.add.xml"/>
+    </input>
+
+    <output>
+        <output-prefix value="output/live_"/>
+        <queue-output value="C:\Users\georg\Desktop\P031\scenarios\cross4\queue.xml"/>
+        <summary-output value="C:\Users\georg\Desktop\P031\scenarios\cross4\summary.xml"/>
+        <tripinfo-output value="C:\Users\georg\Desktop\P031\scenarios\cross4\tripinfo.xml"/>
+        <tripinfo-output.write-unfinished value="true"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="4500"/>
+    </time>
+
+    <processing>
+        <time-to-teleport value="-1"/>
+    </processing>
+
+    <report>
+        <no-step-log value="true"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="53264"/>
+    </traci_server>
+
+    <random_number>
+        <seed value="42"/>
+    </random_number>
+
+</sumoConfiguration>
+-->
+
+<summary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/summary_file.xsd">
+    <step time="0.00" loaded="0" inserted="0" running="0" waiting="0" ended="0" arrived="0" collisions="0" teleports="0" halting="0" stopped="0" meanWaitingTime="-1.00" meanTravelTime="-1.00" meanSpeed="-1.00" meanSpeedRelative="-1.00" discarded="0" duration="0"/>
+    <step time="1.00" loaded="1" inserted="1" running="1" waiting="0" ended="0" arrived="0" collisions="0" teleports="0" halting="0" stopped="0" meanWaitingTime="1.00" meanTravelTime="-1.00" meanSpeed="13.17" meanSpeedRelative="0.95" discarded="0" duration="1"/>
+    <step time="2.00" loaded="2" inserted="2" running="2" waiting="0" ended="0" arrived="0" collisions="0" teleports="0" halting="0" stopped="0" meanWaitingTime="1.00" meanTravelTime="-1.00" meanSpeed="10.90" meanSpeedRelative="0.78" discarded="0" duration="0"/>
+</summary>

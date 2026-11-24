@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-11-24T17:59:07.835897+00:00 by Eclipse SUMO sumo 1.28.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\georg\Desktop\P031\scenarios\cross4\cross4.net.xml"/>
+        <route-files value="C:\Users\georg\Desktop\P031\scenarios\cross4\demand_moderate.rou.xml"/>
+        <additional-files value="C:\Users\georg\Desktop\P031\scenarios\cross4\tlLogic_actuated.add.xml,C:\Users\georg\Desktop\P031\scenarios\cross4\detectors.add.xml"/>
+    </input>
+
+    <output>
+        <output-prefix value="output/web_moderate_actuated/"/>
+        <queue-output value="C:\Users\georg\Desktop\P031\scenarios\cross4\queue.xml"/>
+        <summary-output value="C:\Users\georg\Desktop\P031\scenarios\cross4\summary.xml"/>
+        <tripinfo-output value="C:\Users\georg\Desktop\P031\scenarios\cross4\tripinfo.xml"/>
+        <tripinfo-output.write-unfinished value="true"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+    </time>
+
+    <processing>
+        <time-to-teleport value="-1"/>
+    </processing>
+
+    <report>
+        <no-step-log value="true"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="53106"/>
+    </traci_server>
+
+    <random_number>
+        <seed value="42"/>
+    </random_number>
+
+</sumoConfiguration>
+-->
+
+<tlsSwitches xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/tlsswitches_file.xsd">
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="0.00" end="10.00" duration="10.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="0.00" end="10.00" duration="10.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="15.00" end="25.00" duration="10.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="15.00" end="25.00" duration="10.00"/>
+</tlsSwitches>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-11-24T17:58:50.054115+00:00 by Eclipse SUMO sumo 1.28.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="cross4.net.xml"/>
+        <route-files value="demand_moderate.rou.xml"/>
+        <additional-files value="tlLogic_actuated.add.xml,detectors.add.xml"/>
+    </input>
+
+    <output>
+        <output-prefix value="output/s4_moderate_actuated/seed3/"/>
+        <queue-output value="queue.xml"/>
+        <summary-output value="summary.xml"/>
+        <tripinfo-output value="tripinfo.xml"/>
+        <tripinfo-output.write-unfinished value="true"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+    </time>
+
+    <processing>
+        <time-to-teleport value="-1"/>
+    </processing>
+
+    <report>
+        <no-step-log value="true"/>
+    </report>
+
+    <random_number>
+        <seed value="3"/>
+    </random_number>
+
+</sumoConfiguration>
+-->
+
+<tlsSwitches xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/tlsswitches_file.xsd">
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="0.00" end="10.00" duration="10.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="0.00" end="10.00" duration="10.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="15.00" end="25.00" duration="10.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="15.00" end="25.00" duration="10.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="30.00" end="40.00" duration="10.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="30.00" end="40.00" duration="10.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="45.00" end="55.00" duration="10.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="45.00" end="55.00" duration="10.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="60.00" end="74.00" duration="14.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="60.00" end="74.00" duration="14.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="79.00" end="89.00" duration="10.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="79.00" end="89.00" duration="10.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="94.00" end="131.00" duration="37.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="94.00" end="131.00" duration="37.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="136.00" end="154.00" duration="18.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="136.00" end="154.00" duration="18.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="159.00" end="209.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="159.00" end="209.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="214.00" end="228.00" duration="14.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="214.00" end="228.00" duration="14.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="233.00" end="281.00" duration="48.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="233.00" end="281.00" duration="48.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="286.00" end="297.00" duration="11.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="286.00" end="297.00" duration="11.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="302.00" end="352.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="302.00" end="352.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="357.00" end="383.00" duration="26.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="357.00" end="383.00" duration="26.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="388.00" end="438.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="388.00" end="438.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="443.00" end="460.00" duration="17.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="443.00" end="460.00" duration="17.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="465.00" end="515.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="465.00" end="515.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="520.00" end="541.00" duration="21.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="520.00" end="541.00" duration="21.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="546.00" end="596.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="546.00" end="596.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="601.00" end="618.00" duration="17.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="601.00" end="618.00" duration="17.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="623.00" end="644.00" duration="21.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="623.00" end="644.00" duration="21.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="649.00" end="660.00" duration="11.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="649.00" end="660.00" duration="11.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="665.00" end="684.00" duration="19.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="665.00" end="684.00" duration="19.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="689.00" end="709.00" duration="20.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="689.00" end="709.00" duration="20.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="714.00" end="730.00" duration="16.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="714.00" end="730.00" duration="16.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="735.00" end="745.00" duration="10.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="735.00" end="745.00" duration="10.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="750.00" end="800.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="750.00" end="800.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="805.00" end="821.00" duration="16.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="805.00" end="821.00" duration="16.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="826.00" end="876.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="826.00" end="876.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="881.00" end="907.00" duration="26.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="881.00" end="907.00" duration="26.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="912.00" end="962.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="912.00" end="962.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="967.00" end="981.00" duration="14.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="967.00" end="981.00" duration="14.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="986.00" end="1024.00" duration="38.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="986.00" end="1024.00" duration="38.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="1029.00" end="1040.00" duration="11.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="1029.00" end="1040.00" duration="11.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="1045.00" end="1088.00" duration="43.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="1045.00" end="1088.00" duration="43.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="1093.00" end="1106.00" duration="13.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="1093.00" end="1106.00" duration="13.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="1111.00" end="1136.00" duration="25.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="1111.00" end="1136.00" duration="25.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="1141.00" end="1152.00" duration="11.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="1141.00" end="1152.00" duration="11.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="1157.00" end="1207.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="1157.00" end="1207.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="1212.00" end="1228.00" duration="16.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="1212.00" end="1228.00" duration="16.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="1233.00" end="1283.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="1233.00" end="1283.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="1288.00" end="1316.00" duration="28.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="1288.00" end="1316.00" duration="28.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="1321.00" end="1371.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="1321.00" end="1371.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="1376.00" end="1388.00" duration="12.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="1376.00" end="1388.00" duration="12.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="1393.00" end="1443.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="1393.00" end="1443.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="1448.00" end="1475.00" duration="27.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="1448.00" end="1475.00" duration="27.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="1480.00" end="1530.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="1480.00" end="1530.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="1535.00" end="1563.00" duration="28.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="1535.00" end="1563.00" duration="28.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="1568.00" end="1617.00" duration="49.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="1568.00" end="1617.00" duration="49.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="1622.00" end="1637.00" duration="15.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="1622.00" end="1637.00" duration="15.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="1642.00" end="1692.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="1642.00" end="1692.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="1697.00" end="1712.00" duration="15.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="1697.00" end="1712.00" duration="15.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="1717.00" end="1767.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="1717.00" end="1767.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="1772.00" end="1808.00" duration="36.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="1772.00" end="1808.00" duration="36.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="1813.00" end="1863.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="1813.00" end="1863.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="1868.00" end="1888.00" duration="20.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="1868.00" end="1888.00" duration="20.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="1893.00" end="1939.00" duration="46.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="1893.00" end="1939.00" duration="46.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="1944.00" end="1955.00" duration="11.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="1944.00" end="1955.00" duration="11.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="1960.00" end="1983.00" duration="23.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="1960.00" end="1983.00" duration="23.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="1988.00" end="2008.00" duration="20.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="1988.00" end="2008.00" duration="20.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="2013.00" end="2063.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="2013.00" end="2063.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="2068.00" end="2085.00" duration="17.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="2068.00" end="2085.00" duration="17.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="2090.00" end="2123.00" duration="33.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="2090.00" end="2123.00" duration="33.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="2128.00" end="2141.00" duration="13.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="2128.00" end="2141.00" duration="13.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="2146.00" end="2196.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="2146.00" end="2196.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="2201.00" end="2230.00" duration="29.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="2201.00" end="2230.00" duration="29.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="2235.00" end="2285.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="2235.00" end="2285.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="2290.00" end="2325.00" duration="35.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="2290.00" end="2325.00" duration="35.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="2330.00" end="2380.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="2330.00" end="2380.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="2385.00" end="2404.00" duration="19.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="2385.00" end="2404.00" duration="19.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="2409.00" end="2459.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="2409.00" end="2459.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="2464.00" end="2485.00" duration="21.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="2464.00" end="2485.00" duration="21.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="2490.00" end="2540.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="2490.00" end="2540.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="2545.00" end="2559.00" duration="14.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="2545.00" end="2559.00" duration="14.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="2564.00" end="2614.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="2564.00" end="2614.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="2619.00" end="2639.00" duration="20.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="2619.00" end="2639.00" duration="20.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="2644.00" end="2687.00" duration="43.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="2644.00" end="2687.00" duration="43.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="2692.00" end="2704.00" duration="12.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="2692.00" end="2704.00" duration="12.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="2709.00" end="2759.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="2709.00" end="2759.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="2764.00" end="2793.00" duration="29.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="2764.00" end="2793.00" duration="29.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="2798.00" end="2844.00" duration="46.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="2798.00" end="2844.00" duration="46.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="2849.00" end="2862.00" duration="13.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="2849.00" end="2862.00" duration="13.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="2867.00" end="2917.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="2867.00" end="2917.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="2922.00" end="2944.00" duration="22.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="2922.00" end="2944.00" duration="22.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="2949.00" end="2984.00" duration="35.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="2949.00" end="2984.00" duration="35.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="2989.00" end="3016.00" duration="27.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="2989.00" end="3016.00" duration="27.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="3021.00" end="3071.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="3021.00" end="3071.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="3076.00" end="3101.00" duration="25.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="3076.00" end="3101.00" duration="25.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="3106.00" end="3156.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="3106.00" end="3156.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="3161.00" end="3182.00" duration="21.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="3161.00" end="3182.00" duration="21.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="3187.00" end="3237.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="3187.00" end="3237.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="3242.00" end="3264.00" duration="22.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="3242.00" end="3264.00" duration="22.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="3269.00" end="3319.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="3269.00" end="3319.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="3324.00" end="3335.00" duration="11.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="3324.00" end="3335.00" duration="11.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="3340.00" end="3374.00" duration="34.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="3340.00" end="3374.00" duration="34.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="3379.00" end="3397.00" duration="18.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="3379.00" end="3397.00" duration="18.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="3402.00" end="3452.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="3402.00" end="3452.00" duration="50.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="3457.00" end="3472.00" duration="15.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="3457.00" end="3472.00" duration="15.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="3477.00" end="3509.00" duration="32.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="3477.00" end="3509.00" duration="32.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="3514.00" end="3525.00" duration="11.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="3514.00" end="3525.00" duration="11.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="3530.00" end="3558.00" duration="28.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="3530.00" end="3558.00" duration="28.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="3563.00" end="3574.00" duration="11.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="3563.00" end="3574.00" duration="11.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="3579.00" end="3595.00" duration="16.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="3579.00" end="3595.00" duration="16.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="3600.00" end="3616.00" duration="16.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="3600.00" end="3616.00" duration="16.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="3621.00" end="3650.00" duration="29.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="3621.00" end="3650.00" duration="29.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="N_in_0" toLane="S_out_0" begin="3655.00" end="3665.00" duration="10.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="S_in_0" toLane="N_out_0" begin="3655.00" end="3665.00" duration="10.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="E_in_0" toLane="W_out_0" begin="3670.00" end="3680.00" duration="10.00"/>
+   <tlsSwitch id="C" programID="actuated" fromLane="W_in_0" toLane="E_out_0" begin="3670.00" end="3680.00" duration="10.00"/>
+</tlsSwitches>
